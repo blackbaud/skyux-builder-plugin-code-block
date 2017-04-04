@@ -1,5 +1,5 @@
 {
-  "name": "skyux-builder-plugin-stache-code-block",
+  "name": "@blackbaud/skyux-builder-plugin-stache-code-block",
   "version": "1.0.0",
   "description": "A SKY UX Builder plugin for Stache code block component",
   "main": "index.js",
