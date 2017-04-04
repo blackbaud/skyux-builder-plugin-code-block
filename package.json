@@ -1,0 +1,22 @@
+{
+  "name": "skyux-builder-plugin-stache-code-block",
+  "version": "1.0.0",
+  "description": "A SKY UX Builder plugin for Stache code block component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blackbaud/skyux-builder-plugin-stache-code-block.git"
+  },
+  "author": "Blackbaud, Inc.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blackbaud/skyux-builder-plugin-stache-code-block/issues"
+  },
+  "homepage": "https://github.com/blackbaud/skyux-builder-plugin-stache-code-block#readme",
+  "dependencies": {
+    "cheerio": "^0.22.0"
+  }
+}
