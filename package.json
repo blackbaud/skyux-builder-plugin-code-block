@@ -4,7 +4,8 @@
   "description": "A SKY UX Builder plugin for Stache code block component",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "coverage": "istanbul cover -x 'src/*.spec.js' --report=html jasmine JASMINE_CONFIG_PATH=jasmine.json",
+    "test": "npm run coverage"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,9 @@
   "homepage": "https://github.com/blackbaud/skyux-builder-plugin-stache-code-block#readme",
   "dependencies": {
     "cheerio": "^0.22.0"
+  },
+  "devDependencies": {
+    "istanbul": "0.4.4",
+    "jasmine": "2.4.1"
   }
 }
