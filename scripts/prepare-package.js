@@ -9,11 +9,11 @@ const rootPath = path.join(__dirname, '..');
 const distPath = path.join(rootPath, 'dist');
 
 function createDist() {
-  if (!fs.existsSync('dist')) {
-    fs.mkdirSync('dist');
+  if (!fs.existsSync(distPath)) {
+    fs.mkdirSync(distPath);
   }
 
-  fs.copySync(path.join(rootPath, 'src/code-block.js'), path.join(distPath, 'index.js'));
+  fs.copySync(path.join(rootPath, 'src', 'code-block.js'), path.join(distPath, 'index.js'));
 }
 
 function makePackageFileForDist() {
