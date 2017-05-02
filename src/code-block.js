@@ -15,8 +15,7 @@ const preload = (content, resourcePath) => {
 
   if (codeBlocks.length) {
     codeBlocks.each(function () {
-      let innerText = $(this)
-        .html()
+      let innerText = $(this).html()
         .toString()
         .replace(/{/g, `{{ '{' }}`)
         .replace(/</g, '&lt;');
