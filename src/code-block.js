@@ -14,8 +14,12 @@ const preload = (content, resourcePath) => {
   let codeBlocks = $('stache-code-block');
 
   if (codeBlocks.length) {
-    codeBlocks.each(function (i, elem) {
-      let innerText = $(this).html().toString().replace(/{/g, `{{ '{' }}`).replace(/</g, '&lt;');
+    codeBlocks.each(function () {
+      let innerText = $(this).html()
+        .toString()
+        .replace(/{/g, `{{ '{' }}`)
+        .replace(/</g, '&lt;');
+
       $(this).text(innerText);
     });
 
