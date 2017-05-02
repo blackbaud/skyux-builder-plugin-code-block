@@ -8,12 +8,20 @@ const path = require('path');
 const rootPath = path.join(__dirname, '..');
 const distPath = path.join(rootPath, 'dist');
 
+function createDist() {
+  if (!fs.existsSync('dist')) {
+    fs.mkdirSync('dist');
+  }
+
+  fs.copySync(path.join(rootPath, 'src/code-block.js'), path.join(distPath, 'index.js'));
+}
+
 function makePackageFileForDist() {
   const packageJson = fs.readJSONSync(path.join(rootPath, 'package.json'));
 
   packageJson.module = 'index.js';
 
-  fs.writeJSONSync(path.join(distPath, 'package.json'), packageJson);
+  fs.writeJSONSync(path.join(distPath, 'package.json'), packageJson, { spaces: 2 });
 }
 
 function copyFilesToDist() {
@@ -21,5 +29,6 @@ function copyFilesToDist() {
   fs.copySync(path.join(rootPath, 'CHANGELOG.md'), path.join(distPath, 'CHANGELOG.md'));
 }
 
+createDist();
 makePackageFileForDist();
 copyFilesToDist();
