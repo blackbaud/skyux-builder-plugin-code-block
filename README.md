@@ -1,4 +1,4 @@
-# Stache Code Block
+# Stache Code Block Plugin
 
 [![npm](https://img.shields.io/npm/v/@blackbaud/skyux-builder-plugin-stache-code-block.svg)](https://www.npmjs.com/package/@blackbaud/skyux-builder-plugin-stache-code-block)
 [![status](https://travis-ci.org/blackbaud/skyux-builder-plugin-stache-code-block.svg?branch=master)](https://travis-ci.org/blackbaud/skyux-builder-plugin-stache-code-block)
