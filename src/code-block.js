@@ -11,7 +11,7 @@ const cheerioConfig = {
   decodeEntities: false
 };
 
-const preload = (content, resourcePath) => {
+const preload = (content, resourcePath, skyPagesConfig) => {
   if (!resourcePath.match(/\.html$/)) {
     return content;
   }
