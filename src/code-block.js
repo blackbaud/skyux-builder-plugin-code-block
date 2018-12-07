@@ -11,13 +11,13 @@ const cheerioConfig = {
   decodeEntities: false
 };
 
-const preload = (content, resourcePath, skyPagesConfig) => {
+const preload = (content, resourcePath) => {
   if (!resourcePath.match(/\.html$/)) {
     return content;
   }
 
   const $ = cheerio.load(content, cheerioConfig);
-  const codeBlocks = $('stache-code-block');
+  const codeBlocks = $('sky-code-block');
 
   if (!codeBlocks.length) {
     return content;
