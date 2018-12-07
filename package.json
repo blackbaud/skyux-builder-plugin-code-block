@@ -2,7 +2,7 @@
   "name": "@blackbaud/skyux-builder-plugin-code-block",
   "version": "1.0.0",
   "description": "A SKY UX Builder plugin for code block component",
-  "main": "index.js",
+  "main": "index",
   "scripts": {
     "build": "node ./scripts/prepare-package.js",
     "coverage": "istanbul cover -x 'src/**/*.spec.js' --report=html jasmine JASMINE_CONFIG_PATH=jasmine.json",
@@ -16,7 +16,7 @@
   "author": "Blackbaud, Inc.",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/blackbaud/skyux-builder-plugin-code-block/issues"
+    "url": "https://github.com/blackbaud/stache2/issues"
   },
   "homepage": "https://github.com/blackbaud/skyux-builder-plugin-code-block#readme",
   "dependencies": {
