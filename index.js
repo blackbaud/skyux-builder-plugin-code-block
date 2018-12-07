@@ -1,2 +1,2 @@
-const publicApi = require('./scr/code-block');
+const publicApi = require('./src/code-block');
 module.exports = publicApi
