@@ -19,6 +19,15 @@ describe('Code Block Plugin', () => {
     expect(result.toString()).toEqual(content.toString());
   });
 
+  it('should add the ngPreserveWhitespaces attribute to the <sky-code-block> tags', () => {
+    const content = new Buffer(`
+      <sky-code-block>
+      </sky-code-block>`);
+    const path = 'foo.html';
+    const result = plugin.preload(content, path);
+    expect(result.toString()).toContain('ngPreserveWhitespaces="true"');
+  });
+
   it('should convert the inner HTML of all <sky-code-block> to HTML entities.', () => {
     const content = new Buffer(`
       <sky-code-block>
