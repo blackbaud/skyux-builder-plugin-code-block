@@ -28,6 +28,7 @@ const preload = (content, resourcePath) => {
     const rawContent = $elem.html().toString();
     const content = convertToHTMLEntities(rawContent);
     $elem.html(content);
+    $elem.attr('ngPreserveWhitespaces', true);
   });
 
   return $.html().toString();
