@@ -5,7 +5,6 @@ const shared = require('./utils/shared');
 describe('Entry Plugin', () => {
   let _content;
   let _resourcePath;
-  let _skyPagesConfig;
   const mockPlugin = {
     preload(content, resourcePath) {
       _content = content;
