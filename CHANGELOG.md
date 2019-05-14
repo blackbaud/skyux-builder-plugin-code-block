@@ -1,3 +1,7 @@
+# 1.1.0 (2019-05-14)
+
+- Added support for `sky-code` component. [#9](https://github.com/blackbaud/skyux-builder-plugin-code-block/pull/9)
+
 # 1.0.1 (2019-02-28)
 
 - Added `ngPreserveWhitespaces` attribute to `sky-code-block` element to support Angular v6+. [#7](https://github.com/blackbaud/skyux-builder-plugin-code-block/pull/7)
