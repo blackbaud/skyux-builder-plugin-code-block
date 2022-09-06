@@ -1,8 +1,6 @@
 {
   "extends": "eslint:recommended",
-  "plugins": [
-    "standard"
-  ],
+  "plugins": [],
   "env": {
     "browser": true,
     "node": true,

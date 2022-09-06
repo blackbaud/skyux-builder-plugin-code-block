@@ -12,26 +12,26 @@ const distPath = path.join(rootPath, 'dist');
 
 function createDist() {
   return new Promise((resolve, reject) => {
-    rimraf(distPath, {}, () => {
-      mkdirp(path.join(distPath, 'src'), (err) => {
-        if (err) {
-          reject(err);
-          return;
-        }
-
-        fs.copySync(
-          path.join(rootPath, 'src'),
-          path.join(distPath, 'src'),
-          {
-            filter: (src) => {
-              const isSpecFile = (src.match(/\.spec\.js$/));
-              const isHelpersDir = (src.match(/helpers/));
-              return (!isSpecFile && !isHelpersDir);
+    rimraf(distPath, { }, () => {
+      mkdirp(path.join(distPath, 'src')).then(
+        () => {
+          fs.copySync(
+            path.join(rootPath, 'src'),
+            path.join(distPath, 'src'),
+            {
+              filter: (src) => {
+                const isSpecFile = (src.match(/\.spec\.js$/));
+                const isHelpersDir = (src.match(/helpers/));
+                return (!isSpecFile && !isHelpersDir);
+              }
             }
-          }
-        );
-        resolve();
-      });
+          );
+          resolve();
+        },
+        (err) => {
+          reject(err);
+        }
+      )
     });
   });
 }
