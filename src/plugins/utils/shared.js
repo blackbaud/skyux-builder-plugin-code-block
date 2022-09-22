@@ -5,8 +5,10 @@ function SkyPluginError(message) {
 SkyPluginError.prototype = Error.prototype;
 
 const convertToHTMLEntities = (content) => {
-  return content.replace(/{/g, `{{ '{' }}`)
-    .replace(/</g, '&lt;');
+  return content
+    .replace(/{/g, `{{ '{' }}`)
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
 }
 
 const cheerioConfig = {
